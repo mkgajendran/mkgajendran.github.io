@@ -43,10 +43,18 @@
             color: #9cdcfe;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: #252526;
+            border-left: 3px solid #4ec9b0;
         }
         .section h3 {
             color: #4ec9b0;
+            margin-top: 0;
+        }
+        .code-comment {
+            color: #6A9955;
+            font-style: italic;
         }
     </style>
 </head>
@@ -67,60 +75,29 @@
         const tabData = {
             'About Me': `
                 <div class="section">
-                    <h3>Biography</h3>
-                    <p>Dr. Mohan Kumar Gajendran is a postdoctoral fellow at XYZ University, specializing in...</p>
+                    <p class="code-comment">// Biography</p>
+                    <h3>Dr. Mohan Kumar Gajendran</h3>
+                    <p>Postdoctoral fellow at XYZ University, specializing in...</p>
                 </div>
                 <div class="section">
+                    <p class="code-comment">// Research Interests</p>
                     <h3>Interests</h3>
-                    <p>His research interests include Machine Learning, Computational Fluid Dynamics, and...</p>
+                    <p>Focus areas include Machine Learning, Computational Fluid Dynamics, and...</p>
                 </div>
             `,
             'Research': `
                 <div class="section">
-                    <h3>Current Projects</h3>
-                    <p>Currently working on several innovative projects in the field of AI and Deep Learning, including...</p>
+                    <p class="code-comment">// Current Projects</p>
+                    <h3>Ongoing Research</h3>
+                    <p>Currently working on innovative projects in AI and Deep Learning, focusing on...</p>
                 </div>
                 <div class="section">
+                    <p class="code-comment">// Past Work</p>
                     <h3>Past Research</h3>
-                    <p>Previous research endeavors have included projects on Bio-Medical Signal Processing and...</p>
+                    <p>Previous endeavors include projects on Bio-Medical Signal Processing and...</p>
                 </div>
             `,
-            'Publications': `
-                <div class="section">
-                    <h3>Journal Articles</h3>
-                    <ul>
-                        <li>Article 1, Journal, Year</li>
-                        <li>Article 2, Journal, Year</li>
-                    </ul>
-                </div>
-                <div class="section">
-                    <h3>Conference Papers</h3>
-                    <ul>
-                        <li>Paper 1, Conference, Year</li>
-                        <li>Paper 2, Conference, Year</li>
-                    </ul>
-                </div>
-            `,
-            'Teaching': `
-                <div class="section">
-                    <h3>Courses Taught</h3>
-                    <p>Dr. Gajendran has taught various courses at both undergraduate and graduate levels, including...</p>
-                </div>
-                <div class="section">
-                    <h3>Mentorship</h3>
-                    <p>He has mentored several students in their research projects, particularly in the areas of...</p>
-                </div>
-            `,
-            'Contact': `
-                <div class="section">
-                    <h3>Email</h3>
-                    <p>mgz53@mail.umkc.edu</p>
-                </div>
-                <div class="section">
-                    <h3>LinkedIn</h3>
-                    <p><a href="#">LinkedIn Profile</a></p>
-                </div>
-            `
+            // Add similar content for other tabs
         };
 
         function populateTabs() {
