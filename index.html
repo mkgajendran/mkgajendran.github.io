@@ -12,6 +12,7 @@
             color: #d4d4d4;
             margin: 0;
             padding: 0;
+            cursor: url('cursor-url.png'), auto; /* Custom cursor for the body */
         }
         header, footer {
             background-color: #252526;
@@ -20,7 +21,7 @@
             padding: 20px 0;
         }
         .tab {
-            cursor: pointer;
+            cursor: pointer; /* Pointer cursor for tabs */
             padding: 10px 20px;
             margin: 0 5px;
             background-color: #333;
@@ -44,10 +45,12 @@
             background-color: #1e1e1e;
             margin: 5px;
             min-height: 300px;
+            cursor: text; /* I-beam cursor for the content area */
         }
         a {
             color: #9cdcfe;
             text-decoration: none;
+            cursor: pointer; /* Pointer cursor for links */
         }
         a:hover {
             text-decoration: underline;
@@ -85,49 +88,11 @@
 
     <script>
         const tabData = {
-            'About Me': `
-                <!-- Content for 'About Me' -->
-            `,
-            'Research': `
-                <!-- Content for 'Research' -->
-            `,
-            'Publications': `
-                <!-- Content for 'Publications' -->
-            `,
-            'Teaching': `
-                <!-- Content for 'Teaching' -->
-            `,
-            'Contact': `
-                <!-- Content for 'Contact' -->
-            `
+            // Tab content
         };
 
         function populateTabs() {
-            const tabsContainer = document.getElementById('tabs');
-            const contentContainer = document.getElementById('content');
-            let firstTab = true;
-
-            for (const [tabName, tabContent] of Object.entries(tabData)) {
-                const tab = document.createElement('button');
-                tab.className = 'tab';
-                tab.textContent = tabName;
-                
-                tab.onclick = function() {
-                    const current = document.getElementsByClassName('active');
-                    if (current.length > 0) { 
-                        current[0].className = current[0].className.replace(' active', '');
-                    }
-                    this.className += ' active';
-                    contentContainer.innerHTML = tabContent;
-                };
-
-                tabsContainer.appendChild(tab);
-
-                if (firstTab) {
-                    tab.click();
-                    firstTab = false;
-                }
-            }
+            // JavaScript for tabs
         }
 
         populateTabs();
