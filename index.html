@@ -86,20 +86,30 @@
     <script>
         const tabData = {
             'About Me': `
-                <!-- Content for 'About Me' -->
+                <div class="section">
+                    <p class="code-comment">// Biography</p>
+                    <h3>Dr. Mohan Kumar Gajendran</h3>
+                    <p>Postdoctoral fellow at XYZ University, specializing in...</p>
+                </div>
+                <div class="section">
+                    <p class="code-comment">// Research Interests</p>
+                    <h3>Interests</h3>
+                    <p>Focus areas include Machine Learning, Computational Fluid Dynamics, and...</p>
+                </div>
             `,
             'Research': `
-                <!-- Content for 'Research' -->
+                <div class="section">
+                    <p class="code-comment">// Current Projects</p>
+                    <h3>Ongoing Research</h3>
+                    <p>Currently working on innovative projects in AI and Deep Learning, focusing on...</p>
+                </div>
+                <div class="section">
+                    <p class="code-comment">// Past Work</p>
+                    <h3>Past Research</h3>
+                    <p>Previous endeavors include projects on Bio-Medical Signal Processing and...</p>
+                </div>
             `,
-            'Publications': `
-                <!-- Content for 'Publications' -->
-            `,
-            'Teaching': `
-                <!-- Content for 'Teaching' -->
-            `,
-            'Contact': `
-                <!-- Content for 'Contact' -->
-            `
+            // Add similar content for other tabs
         };
 
         function populateTabs() {
