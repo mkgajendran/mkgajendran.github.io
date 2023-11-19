@@ -42,6 +42,12 @@
         a {
             color: #9cdcfe;
         }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            color: #4ec9b0;
+        }
     </style>
 </head>
 <body>
@@ -59,11 +65,62 @@
 
     <script>
         const tabData = {
-            'About Me': 'Content for About Me...',
-            'Research': 'Content for Research. Detailing current and past research projects...',
-            'Publications': 'List of publications...',
-            'Teaching': 'Information about teaching experience, courses taught, etc...',
-            'Contact': 'Contact information, social media links, etc...'
+            'About Me': `
+                <div class="section">
+                    <h3>Biography</h3>
+                    <p>Dr. Mohan Kumar Gajendran is a postdoctoral fellow at XYZ University, specializing in...</p>
+                </div>
+                <div class="section">
+                    <h3>Interests</h3>
+                    <p>His research interests include Machine Learning, Computational Fluid Dynamics, and...</p>
+                </div>
+            `,
+            'Research': `
+                <div class="section">
+                    <h3>Current Projects</h3>
+                    <p>Currently working on several innovative projects in the field of AI and Deep Learning, including...</p>
+                </div>
+                <div class="section">
+                    <h3>Past Research</h3>
+                    <p>Previous research endeavors have included projects on Bio-Medical Signal Processing and...</p>
+                </div>
+            `,
+            'Publications': `
+                <div class="section">
+                    <h3>Journal Articles</h3>
+                    <ul>
+                        <li>Article 1, Journal, Year</li>
+                        <li>Article 2, Journal, Year</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Conference Papers</h3>
+                    <ul>
+                        <li>Paper 1, Conference, Year</li>
+                        <li>Paper 2, Conference, Year</li>
+                    </ul>
+                </div>
+            `,
+            'Teaching': `
+                <div class="section">
+                    <h3>Courses Taught</h3>
+                    <p>Dr. Gajendran has taught various courses at both undergraduate and graduate levels, including...</p>
+                </div>
+                <div class="section">
+                    <h3>Mentorship</h3>
+                    <p>He has mentored several students in their research projects, particularly in the areas of...</p>
+                </div>
+            `,
+            'Contact': `
+                <div class="section">
+                    <h3>Email</h3>
+                    <p>mgz53@mail.umkc.edu</p>
+                </div>
+                <div class="section">
+                    <h3>LinkedIn</h3>
+                    <p><a href="#">LinkedIn Profile</a></p>
+                </div>
+            `
         };
 
         function populateTabs() {
