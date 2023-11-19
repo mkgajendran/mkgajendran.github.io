@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,70 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Mohan Kumar Gajendran - Academic Profile</title>
-    <style>
-        body {
-            font-family: 'Consolas', 'Courier New', monospace;
-            background-color: #1e1e1e;
-            color: #d4d4d4;
-            margin: 0;
-            padding: 0;
-        }
-        header, footer {
-            background-color: #252526;
-            color: #d4d4d4;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .tab {
-            cursor: pointer;
-            padding: 10px 20px;
-            margin: 0 5px;
-            background-color: #333;
-            border: none;
-            color: #d4d4d4;
-            font-family: 'Consolas', monospace;
-            outline: none;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-        .tab:hover, .active {
-            background-color: #007acc;
-            color: #fff;
-        }
-        #tabs {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #252526;
-        }
-        #content {
-            padding: 20px;
-            background-color: #1e1e1e;
-            margin: 5px;
-            min-height: 300px;
-        }
-        a {
-            color: #9cdcfe;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .section {
-            background-color: #252526;
-            margin: 20px 0;
-            padding: 20px;
-            border-left: 4px solid #4ec9b0;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .section h3 {
-            color: #4ec9b0;
-            margin-top: 0;
-        }
-        .code-comment {
-            color: #6A9955;
-            font-style: italic;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -83,64 +21,6 @@
         <p>&copy; 2023 Dr. Mohan Kumar Gajendran. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        const tabData = {
-            'About Me': `
-                <div class="section">
-                    <p class="code-comment">// Biography</p>
-                    <h3>Dr. Mohan Kumar Gajendran</h3>
-                    <p>Postdoctoral fellow at XYZ University, specializing in...</p>
-                </div>
-                <div class="section">
-                    <p class="code-comment">// Research Interests</p>
-                    <h3>Interests</h3>
-                    <p>Focus areas include Machine Learning, Computational Fluid Dynamics, and...</p>
-                </div>
-            `,
-            'Research': `
-                <div class="section">
-                    <p class="code-comment">// Current Projects</p>
-                    <h3>Ongoing Research</h3>
-                    <p>Currently working on innovative projects in AI and Deep Learning, focusing on...</p>
-                </div>
-                <div class="section">
-                    <p class="code-comment">// Past Work</p>
-                    <h3>Past Research</h3>
-                    <p>Previous endeavors include projects on Bio-Medical Signal Processing and...</p>
-                </div>
-            `,
-            // Add similar content for other tabs
-        };
-
-        function populateTabs() {
-            const tabsContainer = document.getElementById('tabs');
-            const contentContainer = document.getElementById('content');
-            let firstTab = true;
-
-            for (const [tabName, tabContent] of Object.entries(tabData)) {
-                const tab = document.createElement('button');
-                tab.className = 'tab';
-                tab.textContent = tabName;
-                
-                tab.onclick = function() {
-                    const current = document.getElementsByClassName('active');
-                    if (current.length > 0) { 
-                        current[0].className = current[0].className.replace(' active', '');
-                    }
-                    this.className += ' active';
-                    contentContainer.innerHTML = tabContent;
-                };
-
-                tabsContainer.appendChild(tab);
-
-                if (firstTab) {
-                    tab.click();
-                    firstTab = false;
-                }
-            }
-        }
-
-        populateTabs();
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+
+{
+    "About Me": "<div class='section'><h3>Biography</h3><p>Dr. Mohan Kumar Gajendran is a postdoctoral fellow specializing in AI and Machine Learning at XYZ University.</p></div>",
+    "Research": "<div class='section'><h3>Current Research</h3><p>Currently focused on deep learning applications in biometrics.</p></div>",
+    "Publications": "<div class='section'><h3>Selected Publications</h3><p>List of publications goes here.</p></div>",
+    "Teaching": "<div class='section'><h3>Courses Taught</h3><p>Details about teaching assignments and courses.</p></div>",
+    "Contact": "<div class='section'><h3>Contact Information</h3><p>Email: example@email.com</p></div>"
+}
