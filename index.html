@@ -7,7 +7,7 @@
     <title>Dr. Mohan Kumar Gajendran - Academic Profile</title>
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Consolas', 'Courier New', monospace;
             background-color: #1e1e1e;
             color: #d4d4d4;
             margin: 0;
@@ -17,36 +17,48 @@
             background-color: #252526;
             color: #d4d4d4;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px 0;
         }
         .tab {
             cursor: pointer;
-            padding: 10px 15px;
-            margin: 5px;
+            padding: 10px 20px;
+            margin: 0 5px;
             background-color: #333;
-            border: 1px solid #3c3c3c;
+            border: none;
             color: #d4d4d4;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Consolas', monospace;
             outline: none;
+            transition: background-color 0.3s, border-color 0.3s;
         }
         .tab:hover, .active {
             background-color: #007acc;
-            border-color: #007acc;
+            color: #fff;
+        }
+        #tabs {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #252526;
         }
         #content {
             padding: 20px;
             background-color: #1e1e1e;
             margin: 5px;
-            border-left: 3px solid #007acc;
+            min-height: 300px;
         }
         a {
             color: #9cdcfe;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .section {
-            margin-bottom: 30px;
-            padding: 10px;
             background-color: #252526;
-            border-left: 3px solid #4ec9b0;
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 4px solid #4ec9b0;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .section h3 {
             color: #4ec9b0;
@@ -74,30 +86,20 @@
     <script>
         const tabData = {
             'About Me': `
-                <div class="section">
-                    <p class="code-comment">// Biography</p>
-                    <h3>Dr. Mohan Kumar Gajendran</h3>
-                    <p>Postdoctoral fellow at XYZ University, specializing in...</p>
-                </div>
-                <div class="section">
-                    <p class="code-comment">// Research Interests</p>
-                    <h3>Interests</h3>
-                    <p>Focus areas include Machine Learning, Computational Fluid Dynamics, and...</p>
-                </div>
+                <!-- Content for 'About Me' -->
             `,
             'Research': `
-                <div class="section">
-                    <p class="code-comment">// Current Projects</p>
-                    <h3>Ongoing Research</h3>
-                    <p>Currently working on innovative projects in AI and Deep Learning, focusing on...</p>
-                </div>
-                <div class="section">
-                    <p class="code-comment">// Past Work</p>
-                    <h3>Past Research</h3>
-                    <p>Previous endeavors include projects on Bio-Medical Signal Processing and...</p>
-                </div>
+                <!-- Content for 'Research' -->
             `,
-            // Add similar content for other tabs
+            'Publications': `
+                <!-- Content for 'Publications' -->
+            `,
+            'Teaching': `
+                <!-- Content for 'Teaching' -->
+            `,
+            'Contact': `
+                <!-- Content for 'Contact' -->
+            `
         };
 
         function populateTabs() {
