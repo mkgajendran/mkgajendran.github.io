@@ -2,52 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Data Fetching Example</title>
+    <title>Dr. Mohan Kumar Gajendran - Academic Profile</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Consolas', 'Courier New', monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
-        .container {
-            width: 80%;
-            margin: auto;
+        header, footer {
+            background-color: #252526;
+            color: #d4d4d4;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #333;
+            border: none;
+            color: #d4d4d4;
+            font-family: 'Consolas', monospace;
+            outline: none;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .tab:hover, .active {
+            background-color: #007acc;
+            color: #fff;
+        }
+        #tabs {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #252526;
+        }
+        #content {
             padding: 20px;
+            background-color: #1e1e1e;
+            margin: 5px;
+            min-height: 300px;
         }
-        .data-container {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-top: 20px;
+        a {
+            color: #9cdcfe;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            background-color: #252526;
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 4px solid #4ec9b0;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .section h3 {
+            color: #4ec9b0;
+            margin-top: 0;
+        }
+        .code-comment {
+            color: #6A9955;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Live Data Fetching Example</h1>
-        <button id="fetchButton">Fetch Data</button>
-        <div id="data-container" class="data-container">
-            Click the button to fetch data...
-        </div>
-    </div>
+    <header>
+        <h1>Dr. Mohan Kumar Gajendran</h1>
+        <p>Postdoctoral Fellow in Computer Science and Engineering</p>
+    </header>
+
+    <div id="tabs"></div>
+    <div id="content"></div>
+
+    <footer>
+        <p>&copy; 2023 Dr. Mohan Kumar Gajendran. All Rights Reserved.</p>
+    </footer>
 
     <script>
-        document.getElementById('fetchButton').addEventListener('click', function() {
-            fetch('https://jsonplaceholder.typicode.com/posts')
-                .then(response => response.json())
-                .then(data => {
-                    const dataContainer = document.getElementById('data-container');
-                    dataContainer.innerHTML = '<ul>' + 
-                        data.slice(0, 5).map(post => `<li>${post.title}</li>`).join('') +
-                        '</ul>';
-                })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                });
-        });
+        const tabData = {
+            'About Me': `
+                <!-- Content for 'About Me' -->
+            `,
+            'Research': `
+                <!-- Content for 'Research' -->
+            `,
+            'Publications': `
+                <!-- Content for 'Publications' -->
+            `,
+            'Teaching': `
+                <!-- Content for 'Teaching' -->
+            `,
+            'Contact': `
+                <!-- Content for 'Contact' -->
+            `
+        };
+
+        function populateTabs() {
+            const tabsContainer = document.getElementById('tabs');
+            const contentContainer = document.getElementById('content');
+            let firstTab = true;
+
+            for (const [tabName, tabContent] of Object.entries(tabData)) {
+                const tab = document.createElement('button');
+                tab.className = 'tab';
+                tab.textContent = tabName;
+                
+                tab.onclick = function() {
+                    const current = document.getElementsByClassName('active');
+                    if (current.length > 0) { 
+                        current[0].className = current[0].className.replace(' active', '');
+                    }
+                    this.className += ' active';
+                    contentContainer.innerHTML = tabContent;
+                };
+
+                tabsContainer.appendChild(tab);
+
+                if (firstTab) {
+                    tab.click();
+                    firstTab = false;
+                }
+            }
+        }
+
+        populateTabs();
     </script>
 </body>
 </html>
