@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Mohan Kumar Gajendran - Academic Profile</title>
+    <title>Coding Themed Website with Different Cursors</title>
     <style>
         body {
             font-family: 'Consolas', 'Courier New', monospace;
@@ -12,7 +11,6 @@
             color: #d4d4d4;
             margin: 0;
             padding: 0;
-            cursor: url('cursor-url.png'), auto; /* Custom cursor for the body */
         }
         header, footer {
             background-color: #252526;
@@ -21,7 +19,7 @@
             padding: 20px 0;
         }
         .tab {
-            cursor: pointer; /* Pointer cursor for tabs */
+            cursor: pointer; /* Standard pointer cursor for tabs */
             padding: 10px 20px;
             margin: 0 5px;
             background-color: #333;
@@ -45,57 +43,86 @@
             background-color: #1e1e1e;
             margin: 5px;
             min-height: 300px;
-            cursor: text; /* I-beam cursor for the content area */
-        }
-        a {
-            color: #9cdcfe;
-            text-decoration: none;
-            cursor: pointer; /* Pointer cursor for links */
-        }
-        a:hover {
-            text-decoration: underline;
         }
         .section {
-            background-color: #252526;
             margin: 20px 0;
             padding: 20px;
+            background-color: #252526;
             border-left: 4px solid #4ec9b0;
             border-radius: 4px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        .section h3 {
-            color: #4ec9b0;
-            margin-top: 0;
+        .text-editor {
+            cursor: text; /* I-beam cursor for text editor style sections */
         }
-        .code-comment {
-            color: #6A9955;
-            font-style: italic;
+        .pointer {
+            cursor: pointer; /* Pointer cursor for interactive sections */
+        }
+        .crosshair {
+            cursor: crosshair; /* Crosshair cursor for precision required sections */
+        }
+        .default {
+            cursor: default; /* Default cursor for standard sections */
+        }
+        .help {
+            cursor: help; /* Help cursor for informative sections */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Dr. Mohan Kumar Gajendran</h1>
-        <p>Postdoctoral Fellow in Computer Science and Engineering</p>
+        <h1>Unique Cursors Website</h1>
+        <p>Different Cursors for Different Sections</p>
     </header>
 
-    <div id="tabs"></div>
-    <div id="content"></div>
+    <div id="tabs">
+        <button class="tab active" onclick="showSection('section1')">Section 1</button>
+        <button class="tab" onclick="showSection('section2')">Section 2</button>
+        <button class="tab" onclick="showSection('section3')">Section 3</button>
+        <button class="tab" onclick="showSection('section4')">Section 4</button>
+    </div>
+
+    <div id="content">
+        <div id="section1" class="section text-editor">
+            <h2>Text Editor</h2>
+            <p>This section simulates a text editor environment. Try selecting this text.</p>
+        </div>
+        <div id="section2" class="section pointer" style="display:none;">
+            <h2>Interactive Section</h2>
+            <p>This section is more interactive. Notice the pointer cursor here.</p>
+        </div>
+        <div id="section3" class="section crosshair" style="display:none;">
+            <h2>Precision Section</h2>
+            <p>This section is for precise tasks. The crosshair cursor is used here.</p>
+        </div>
+        <div id="section4" class="section help" style="display:none;">
+            <h2>Help Section</h2>
+            <p>Need help? This section is for assistance and information.</p>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2023 Dr. Mohan Kumar Gajendran. All Rights Reserved.</p>
+        <p>&copy; 2023 Unique Cursors. All Rights Reserved.</p>
     </footer>
 
     <script>
-        const tabData = {
-            // Tab content
-        };
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
 
-        function populateTabs() {
-            // JavaScript for tabs
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Update active tab
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
         }
-
-        populateTabs();
     </script>
 </body>
 </html>
