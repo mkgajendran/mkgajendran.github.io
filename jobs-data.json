@@ -1,8 +1,7 @@
-
 {
-    "About Me": "<div class='section'><h3>Biography</h3><p>Dr. Mohan Kumar Gajendran is a postdoctoral fellow specializing in AI and Machine Learning at XYZ University.</p></div>",
-    "Research": "<div class='section'><h3>Current Research</h3><p>Currently focused on deep learning applications in biometrics.</p></div>",
-    "Publications": "<div class='section'><h3>Selected Publications</h3><p>List of publications goes here.</p></div>",
-    "Teaching": "<div class='section'><h3>Courses Taught</h3><p>Details about teaching assignments and courses.</p></div>",
-    "Contact": "<div class='section'><h3>Contact Information</h3><p>Email: example@email.com</p></div>"
+    "About Me": "<div class='section'><h3>Biography</h3><p>Dr. Mohan Kumar Gajendran is a postdoctoral fellow specializing in AI and Machine Learning at XYZ University. He completed his Ph.D. in Computer Science from ABC University, focusing on neural network optimization.</p><h3>Interests</h3><p>Dr. Gajendran has a keen interest in the fields of computational neuroscience and quantum computing. He is also passionate about teaching and mentoring young researchers.</p></div>",
+    "Research": "<div class='section'><h3>Current Research</h3><p>Currently focused on deep learning applications in biometrics, specifically in the area of facial recognition technology and its ethical implications.</p><h3>Past Projects</h3><p>Previously worked on developing algorithms for large-scale data analysis in genomic studies, contributing to significant breakthroughs in the field.</p></div>",
+    "Publications": "<div class='section'><h3>Selected Publications</h3><ul><li>Gajendran, M.K., et al. (2022). Advances in Biometric Security: A Deep Learning Approach. Journal of AI Research.</li><li>Gajendran, M.K., et al. (2021). Exploring Quantum Computing for Big Data Processing. International Journal of Quantum Information.</li></ul></div>",
+    "Teaching": "<div class='section'><h3>Courses Taught</h3><p>Dr. Gajendran has taught a variety of courses including Advanced Machine Learning, Introduction to AI, and Ethics in Computing.</p><h3>Mentorship</h3><p>He has mentored over 20 graduate students, guiding them through their thesis projects and research papers.</p></div>",
+    "Contact": "<div class='section'><h3>Contact Information</h3><p>Email: dr.mohan@example.com</p><p>LinkedIn: <a href='https://www.linkedin.com/in/drmohangajendran'>linkedin.com/in/drmohangajendran</a></p></div>"
 }
